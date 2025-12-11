@@ -7,7 +7,7 @@ export default function WordlePage() {
       <h2>Wordle</h2>
       <div className="wordle-container">
         <iframe
-          src="/wordle/index.html"
+          src="/final-project-ujwal-dahal/wordle/index.html"
           style={{
             width: "100%",
             height: "100vh",
