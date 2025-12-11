@@ -1,12 +1,11 @@
 import './App.css'
+import FrontPage from './pages/FrontPage'
 
 function App() {
-
   return (
-    <>
-      <h1>GameHub</h1>
-      <p>Welcome to GameHub</p>
-    </>
+    <div className="app-root">
+      <FrontPage />
+    </div>
   )
 }
 

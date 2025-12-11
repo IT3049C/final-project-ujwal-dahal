@@ -4,3 +4,166 @@
   padding: 2rem;
   text-align: center;
 }
+
+.frontpage {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: white;
+}
+
+.front-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.front-header h1 {
+  color: white;
+  margin: 0;
+}
+
+.muted { color: rgba(255,255,255,0.7); font-size: 0.95rem }
+
+.avatar-preview { display:flex; align-items:center }
+.avatar-circle { width:64px; height:64px; border-radius:50%; color:white; display:grid; place-items:center; font-weight:700 }
+.avatar-circle.small { width:40px; height:40px; font-size:0.9rem }
+.avatar-img { width:64px; height:64px; border-radius:50%; object-fit:cover; display:inline-block }
+.avatar-img.small { width:40px; height:40px }
+
+.content-grid { display:grid; grid-template-columns: 320px 1fr; gap:1rem; align-items:start }
+.card { background: #fff; border-radius:8px; padding:1rem; box-shadow: 0 6px 18px rgba(20,20,20,0.06); color: black; }
+.card h2 { color: black; }
+.card label { color: black; }
+.card legend { color: black; }
+.card fieldset { color: black; }
+.card button { color: white; }
+
+.settings-form label { display:block; margin-bottom:0.5rem; text-align:left; color: black; }
+.settings-form input[type="text"], .settings-form input[type="email"] { width:100%; padding:0.5rem; margin-top:0.25rem; color: black; background: #f9f9f9; }
+
+.avatar-options { display:flex; gap:0.5rem; flex-wrap:wrap }
+.avatar-option { display:flex; align-items:center; gap:0.5rem; cursor:pointer; padding:0.25rem; border-radius:6px; color: black; }
+.avatar-option input { display:none }
+.avatar-option.selected { outline: 2px solid #6ec1ff }
+.avatar-label { text-transform:capitalize; font-size:0.9rem; color: black; }
+
+.btn-primary { background:#2b6cb0; color:#fff; border:none; padding:0.5rem 0.75rem; border-radius:6px; cursor:pointer }
+.btn-link { background:transparent; border:1px solid #ccc; padding:0.35rem 0.6rem; border-radius:6px; text-decoration:none; color: black; }
+
+.games-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(160px,1fr)); gap:0.75rem }
+.game-card { padding:0.75rem; border-radius:6px; background:linear-gradient(180deg,#fbfbff,#f7fbff); text-align:left; color: black; }
+.game-card h3 { color: black; }
+.game-card p { color: black; }
+
+/* Game page styles */
+.game-page, .rps-page, .wordle-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  color: black;
+}
+
+.game-page h2, .rps-page h2, .wordle-page h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: black;
+}
+
+.game-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.wordle-container {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.wordle-page .wordle-container {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+}
+
+.wordle-page .wordle-container iframe {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.back-button {
+  background: #2b6cb0;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.back-button:hover {
+  background: #1a4a8a;
+}
+
+/* RPS game text color override */
+.rps-page, .rps-page * {
+  color: black !important;
+}
+
+.rps-page .card {
+  color: black;
+}
+
+.rps-page h2 {
+  color: black;
+}
+
+.rps-page header {
+  color: black;
+}
+
+.rps-page section {
+  color: black;
+}
+
+.rps-page section h3 {
+  color: black;
+}
+
+.rps-page button {
+  color: white;
+  background: #2b6cb0;
+}
+
+.game-page, .game-page * {
+  color: black !important;
+}
+
+.game-page h2 {
+  color: black;
+}
+
+.game-page .status {
+  color: black;
+}
+
+.game-page .square {
+  color: black;
+}
+
+@media (max-width:900px){
+  .content-grid { grid-template-columns: 1fr; }
+  .front-header { flex-direction:column; align-items:flex-start }
+}
