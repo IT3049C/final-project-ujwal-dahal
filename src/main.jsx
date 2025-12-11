@@ -12,7 +12,9 @@ const router = createBrowserRouter([
   { path: '/game/tic-tac-toe', element: <TicTacToePage /> },
   { path: '/game/rps', element: <RPSPage /> },
   { path: '/game/wordle', element: <WordlePage /> },
-]);
+], {
+  basename: '/final-project-ujwal-dahal/',
+});
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
